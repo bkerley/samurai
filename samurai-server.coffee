@@ -16,3 +16,9 @@ server = http.createServer (req, res) ->
 
 server.listen 8420, ->
   console.log "listening http://localhost:8420"
+
+io = socket.listen server
+
+io.sockets.on 'connection', (socket) ->
+  socket.on 'client_ok', (data) ->
+    console.log "client_ok #{data}"

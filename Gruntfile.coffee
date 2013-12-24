@@ -11,7 +11,7 @@ module.exports = (grunt) ->
     coffee:
       compile:
         files:
-          'public/samurai-client.js': 'samurai-client.coffee'
+          'public/samurai-client.js': 'public/samurai-client.coffee'
     haml:
       dist:
         files:
